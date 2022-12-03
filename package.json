@@ -1,0 +1,22 @@
+{
+  "name": "projeto-final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linefmv/projeto-final-reprograma.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/linefmv/projeto-final-reprograma/issues"
+  },
+  "homepage": "https://github.com/linefmv/projeto-final-reprograma#readme",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
