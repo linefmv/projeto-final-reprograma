@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/linefmv/projeto-final-reprograma.git"
   },
+  "type": "module",
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -17,6 +18,14 @@
   },
   "homepage": "https://github.com/linefmv/projeto-final-reprograma#readme",
   "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.19.6",
+    "@babel/preset-env": "^7.20.2",
+    "@types/jest": "^29.2.3",
+    "babel-jest": "^29.3.1",
     "jest": "^29.3.1"
+  },
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
   }
 }
