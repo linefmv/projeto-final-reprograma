@@ -15,7 +15,7 @@ class Weather {
 
     async callApiWheter() {
         const callFunction = await this.callApiTransformCityInLatAndLog();
-
+        
         const lat = callFunction.results[0].geometry.location.lat;
         const long = callFunction.results[0].geometry.location.lng;
 

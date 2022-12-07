@@ -1,9 +1,12 @@
-import  WeatherCep from './severeWheter/SevereWeather.js';
+import WeatherCity from './WeatherCity/WeatherCity.js';
 import PromptSync from 'prompt-sync';
 
 const prompt = PromptSync();
 
-const getCep = prompt('Digite o seu CEP:');
+function returnDataToUser() {
+    const city = prompt('Digite o nome da sua Cidade:');
+    const formattedCep = new WeatherCity(city);
+    return formattedCep.formatCity();
+}
 
-const formattedCep = new WeatherCep(getCep);
-console.log(formattedCep.formatCep());
+console.log(returnDataToUser());

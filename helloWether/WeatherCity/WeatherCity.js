@@ -9,16 +9,18 @@ class WeatherCity {
       const removeExtraSpaces = checkIfHaveNumbersInsideString.replaceAll(/\s/g, '');
       const checkIfHaveSpecialCharacterRemove = removeExtraSpaces.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
-
+      console.log(city, checkIfHaveNumbersInsideString, removeExtraSpaces, checkIfHaveSpecialCharacterRemove)
       return checkIfHaveSpecialCharacterRemove;
     }
 
-    const city = checkErrorInString(this.city);
+    const cityAfterCheckError = checkErrorInString(this.city);
 
-    if (city.length === 0) {
+    console.log(cityAfterCheckError, 'city')
+
+    if (cityAfterCheckError.length === 0) {
       return 'Ops! Não conseguimos identificar a sua cidade, tente novamente!';
-    } if (city.length > 0 && city.length <= 3) {
-      return `A cidade que você digitou é: ${city}`;
+    } if (cityAfterCheckError.length >= 2) {
+      return `A cidade que você digitou é: ${cityAfterCheckError}`;
     } else {
       return 'Ops! Não conseguimos identificar a sua cidade, tente novamente!';
     }
@@ -26,3 +28,5 @@ class WeatherCity {
 }
 
 export default WeatherCity;
+
+console.log(new WeatherCity('São Paulo').formatCity());
