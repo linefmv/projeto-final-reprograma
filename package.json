@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "node-fetch": "^3.3.0",
-    "prompt-sync": "^4.2.0"
+    "prompt-sync": "^4.2.0",
+    "translate": "^1.4.1"
   }
 }
