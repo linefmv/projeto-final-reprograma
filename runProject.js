@@ -8,7 +8,9 @@ const prompt = PromptSync();
 function returnDataToUser() {
     const city = prompt('Digite o nome da sua Cidade:');
     const formattedCep = new Weather(city);
-    formattedCep.getWeather();     
+    formattedCep.formatCity();
+                                        
+    return formattedCep.getWeather();
 }
 
 console.log(returnDataToUser());

@@ -21,7 +21,7 @@ class Weather extends WeatherCity {
         const callFunction = await this.callApiTransformCityInLatAndLog();
 
         if (callFunction.status === 'ZERO_RESULTS') {
-            console.log('Ops! Não conseguimos identificar a sua cidade, tente novamente!');
+            console.log('Ops! Nós não conseguimos identificar a sua cidade, tente novamente!');
         } else {
             const lat = callFunction.results[0].geometry.location.lat;
             const long = callFunction.results[0].geometry.location.lng;
@@ -34,7 +34,7 @@ class Weather extends WeatherCity {
 
     async getWeather() {
 
-        const getLocalWeather = await this.callApiWheter();
+        const getLocalWeather = await this.callApiWheter()
 
         const newObj = {};
         const getInfos = getLocalWeather.results.map((item) => {
@@ -54,7 +54,8 @@ class Weather extends WeatherCity {
 
 
         if (newObj.level) {
-            console.log('Atenção! Foi emitido um alerta', translateLevel, 'para a sua cidade:', translateDescription, '\n', '\n', newObj.alertDetails, '\n', '\n', '- Fonte: ' + newObj.source, '\n', '- Status da emissão do alerta: ' + translateStautsOfAlert);
+            console.log('Atenção! Foi emitido um alerta', translateLevel, 'para a sua cidade:', translateDescription, '\n', '\n', 
+            newObj.alertDetails, '\n', '\n', '- Fonte: ' + newObj.source, '\n', '- Status da emissão do alerta: ' + translateStautsOfAlert);
         } else {
             console.log('Ainda não foi emitido nenhum alerta para a sua cidade');
         }
