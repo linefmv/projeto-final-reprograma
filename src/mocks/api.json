@@ -26,33 +26,6 @@
                     "alertDetailsLanguageCode": "pt-BR"
                 }
             ]
-        },
-        {
-            "countryCode": "BR",
-            "alertId": 13808,
-            "description": {
-                "localized": "Yellow Alert for Excessive Rainfall",
-                "english": "Yellow Alert for Excessive Rainfall"
-            },
-            "category": "FLOOD",
-            "priority": 42,
-            "level": "Moderate",
-            "source": "Instituto Nacional de Meteorologia",
-            "sourceId": 49,
-            "alertAreas": [
-                {
-                    "name": "São Paulo",
-                    "summary": "Yellow Alert for Excessive Rainfall in effect until 11:00 AM BRT.  Source: Instituto Nacional de Meteorologia",
-                    "startTime": "2022-12-07T10:30:00-03:00",
-                    "endTime": "2022-12-08T11:00:00-03:00",
-                    "latestStatus": {
-                        "localized": "Continue",
-                        "english": "Continue"
-                    },
-                    "alertDetails": "INMET publica aviso iniciando em: 07/12/2022 10:30. Chuva entre 20 a 30 mm/h ou até 50 mm/dia. Baixo risco de alagamentos e pequenos deslizamentos, em cidades com tais áreas de risco. Evite enfrentar o mau tempo. Observe alteração nas encostas. Evite usar aparelhos eletrônicos ligados à tomada. Obtenha mais informações junto à Defesa Civil (telefone 199) e ao Corpo de Bombeiros (telefone 193).",
-                    "alertDetailsLanguageCode": "pt-BR"
-                }
-            ]
         }
     ]
 }
