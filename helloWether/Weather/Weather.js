@@ -1,19 +1,19 @@
+import WeatherCity from '../WeatherCity/WeatherCity.js';
 import fetch from 'node-fetch';
 import dotenv from "dotenv";
-import translate from "translate";
-translate.engine = "google";
-translate.key = process.env.GOOGLE_KEY;
 dotenv.config();
+import translate from "translate";
 
-class Weather {
+translate.engine = "google";
+
+class Weather extends WeatherCity {
     constructor(city) {
-        this.city = city;
+        super(city);
     }
 
     async callApiTransformCityInLatAndLog() {
         const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${this.city}&key=${process.env.GOOGLE_KEY}`);
         const data = await response.json();
-
         return data;
     }
 
@@ -28,7 +28,6 @@ class Weather {
 
             const api = await fetch(`https://atlas.microsoft.com/weather/severe/alerts/json?api-version=1.0&query=${lat},${long}&language={pt-BR}&subscription-key=${process.env.MICROSOFT_KEY}`);
             const data = await api.json();
-
             return data;
         }
     }
@@ -48,6 +47,7 @@ class Weather {
 
             return newObj;
         });
+
         const translateDescription = await translate(newObj.description, "pt");
         const translateLevel = await translate(newObj.level, "pt");
         const translateStautsOfAlert = await translate(newObj.latestStatus, "pt");
@@ -56,9 +56,10 @@ class Weather {
         if (newObj.level) {
             console.log('Atenção! Foi emitido um alerta', translateLevel, 'para a sua cidade:', translateDescription, '\n', '\n', newObj.alertDetails, '\n', '\n', '- Fonte: ' + newObj.source, '\n', '- Status da emissão do alerta: ' + translateStautsOfAlert);
         } else {
-            console.log('Não foi emitido nenhum alerta para a sua cidade');
+            console.log('Ainda não foi emitido nenhum alerta para a sua cidade');
         }
 
         return getInfos
     }
 }
+export default Weather;
