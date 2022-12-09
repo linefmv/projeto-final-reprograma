@@ -38,3 +38,8 @@ E o Hello Wether trazerá se tem algum alerta naquela região.
 
 
 ## Tech
+- Jest
+- Dotenv
+- node-fetch
+- prompt-sync
+- translate
