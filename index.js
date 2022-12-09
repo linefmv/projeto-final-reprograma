@@ -5,11 +5,20 @@ dotenv.config();
 
 const prompt = PromptSync();
 
+
+
 function returnDataToUser() {
+    const welcome = '\n Olá, seja bem vindo ao Hello Weather! \n';
+    console.log(`
+  _-. _:::::::::::::::::::::::::::::::::::::::.:::::
+ (    ) ),--.:::::::::::::::::::::::::::::::::::.:::
+             )-._:::::::::::::::::::::::::::::::::::
+_________________)::::::::::::::::::::::::::::::::::`, welcome);
+
     const city = prompt('Digite o nome da sua Cidade:');
     const formattedCep = new Weather(city);
     formattedCep.formatCity();
-                                        
+
     return formattedCep.getWeather();
 }
 
