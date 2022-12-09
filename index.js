@@ -3,7 +3,9 @@ import PromptSync from 'prompt-sync';
 import dotenv from "dotenv";
 dotenv.config();
 
-const prompt = PromptSync();
+const prompt = PromptSync({
+    sigint: true
+});
 
 
 
