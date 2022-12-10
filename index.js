@@ -15,9 +15,11 @@ function returnDataToUser() {
   _-. _:::::::::::::::::::::::::::::::::::::::.:::::
  (    ) ),--.:::::::::::::::::::::::::::::::::::.:::
              )-._:::::::::::::::::::::::::::::::::::
-_________________)::::::::::::::::::::::::::::::::::`, welcome);
+_________________)::::::::::::::::::::::::::::::::::
+    Olá, seja bem vindo ao Hello Weather!:::::::::::
+Veja se há alerta metereológico na sua cidade:::::::\n`);
 
-    const city = prompt('Digite o nome da sua Cidade:');
+    const city = prompt('Por favor, digite o nome da sua Cidade:');
     const formattedCep = new Weather(city);
     formattedCep.formatCity();
 

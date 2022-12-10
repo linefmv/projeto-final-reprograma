@@ -11,30 +11,34 @@ class Weather extends WeatherCity {
         super(city);
     }
 
-    async callApiTransformCityInLatAndLog() {
+    async transformCityNameInCoordinates() {
         const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${this.city}&key=${process.env.GOOGLE_KEY}`);
         const data = await response.json();
-        return data;
-    }
 
-    async callApiWheter() {
-        const callFunction = await this.callApiTransformCityInLatAndLog();
-
-        if (callFunction.status === 'ZERO_RESULTS') {
+        if (data.status === 'ZERO_RESULTS') {
             console.log('Ops! Nós não conseguimos identificar a sua cidade, tente novamente!');
         } else {
-            const lat = callFunction.results[0].geometry.location.lat;
-            const long = callFunction.results[0].geometry.location.lng;
+            return data
+        };
+    }
 
-            const api = await fetch(`https://atlas.microsoft.com/weather/severe/alerts/json?api-version=1.0&query=${lat},${long}&language={pt-BR}&subscription-key=${process.env.MICROSOFT_KEY}`);
-            const data = await api.json();
-            return data;
-        }
+    async getCoordinates() {
+        const callFunction = await this.transformCityNameInCoordinates();
+
+        const lat = callFunction.results[0].geometry.location.lat;
+        const long = callFunction.results[0].geometry.location.lng;
+
+
+
+        const api = await fetch(`https://atlas.microsoft.com/weather/severe/alerts/json?api-version=1.0&query=${lat},${long}&language={pt-BR}&subscription-key=${process.env.MICROSOFT_KEY}`);
+        const data = await api.json();
+        
+        return data;
     }
 
     async getWeather() {
 
-        const getLocalWeather = await this.callApiWheter()
+        const getLocalWeather = await this.getCoordinates()
 
         const weatherInfo = {};
         const getInfos = getLocalWeather.results.forEach((item) => {
