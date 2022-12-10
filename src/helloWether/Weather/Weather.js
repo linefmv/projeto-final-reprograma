@@ -28,11 +28,9 @@ class Weather extends WeatherCity {
         const lat = callFunction.results[0].geometry.location.lat;
         const long = callFunction.results[0].geometry.location.lng;
 
-
-
         const api = await fetch(`https://atlas.microsoft.com/weather/severe/alerts/json?api-version=1.0&query=${lat},${long}&language={pt-BR}&subscription-key=${process.env.MICROSOFT_KEY}`);
         const data = await api.json();
-        
+
         return data;
     }
 
