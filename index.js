@@ -10,14 +10,13 @@ const prompt = PromptSync({
 
 
 function returnDataToUser() {
-    const welcome = '\n Olá, seja bem vindo ao Hello Weather! \n';
-    console.log(`
+    console.log('\x1b[36m%s\x1b[0m',`
   _-. _:::::::::::::::::::::::::::::::::::::::.:::::
  (    ) ),--.:::::::::::::::::::::::::::::::::::.:::
              )-._:::::::::::::::::::::::::::::::::::
 _________________)::::::::::::::::::::::::::::::::::
     Olá, seja bem vindo ao Hello Weather!:::::::::::
-Veja se há alerta metereológico na sua cidade:::::::\n`);
+\x1b[33m Veja se há alerta metereológico na sua cidade::::::\n`);
 
     const city = prompt('Por favor, digite o nome da sua Cidade:');
     const formattedCep = new Weather(city);
