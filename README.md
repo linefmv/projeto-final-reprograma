@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="./giphy.gif" alt="gif sunny day" width="200px" height="200px">
+  <img src="https://media.tenor.com/bC57J4v11UcAAAAM/weather-sunny.gif" alt="gif sunny day" height="200px">
 </p>
 
 <p align="center">
@@ -35,9 +35,9 @@ E o Hello Weather retornará se há alerta naquela região.
 
 ## Instruções para iniciar o projeto
 1) Clone o Projeto
-2) Abra o Hello Weather no editor de sua preferência
+2) Abra o Hello Weather no editor de texto da sua preferência
 3) ``npm install``
-4) ``npm run start `` para iniciar o Hello Weather.
+4) ``npm run start`` para iniciar o Hello Weather.
 5) ``npm run test `` para rodar todos os testes.
 6) ``npm test -- --coverage`` para verificar a cobertura de testes.
 
@@ -60,7 +60,6 @@ Com o passar dos anos, os fenômenos climáticos estão ficando cada vez mais se
 
 
 ## Implementações futuras e melhorias
-- Ter uma api própria. 
 - Aumentar cobertura de testes.
 - Refatorar e usar mais single responsibility principle (desacoplar funções)
 - Mapear outputs da Api
