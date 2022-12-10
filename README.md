@@ -42,6 +42,8 @@ E o Hello Weather retornará se há alerta naquela região.
 6) ``npm test -- --coverage`` para verificar a cobertura de testes.
 
 ## Tech Stack
+- Api [Weather - Microsoft](https://learn.microsoft.com/pt-br/rest/api/maps/weather/get-severe-weather-alerts?tabs=HTTP)
+- Api [Geocoding - Google](https://developers.google.com/maps/documentation/javascript/geocoding)
 - Node 16.10.0
 - Jest
 - Dotenv
