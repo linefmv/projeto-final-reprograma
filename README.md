@@ -64,3 +64,4 @@ Com o passar dos anos, os fenômenos climáticos estão ficando cada vez mais se
 ## Implementações futuras e melhorias
 - Ter uma api própria. 
 - Aumentar cobertura de testes.
+- Refatorar e usar mais single responsibility principle (desacoplar funções)
