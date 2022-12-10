@@ -39,7 +39,7 @@ E o Hello Weather retornará se há alerta naquela região.
 3) ``npm install``
 4) ``npm run start`` para iniciar o Hello Weather.
 5) ``npm run test `` para rodar todos os testes.
-6) ``npm test -- --coverage`` para verificar a cobertura de testes.
+6) ``npm run coverage`` para verificar a cobertura de testes.
 
 ## Tech Stack
 - Api [Weather - Microsoft](https://learn.microsoft.com/pt-br/rest/api/maps/weather/get-severe-weather-alerts?tabs=HTTP)
